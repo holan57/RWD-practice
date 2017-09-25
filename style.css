@@ -4,7 +4,6 @@
 
 #nav {
   background-color: #40b0b5;
-  margin: 0PX 0PX 5PX 0PX;
   position: fixed;
   top: 0;
   left: 0;
@@ -25,7 +24,7 @@
 
 
 .container {
-  width: 1000px;
+  width: 800px;
   margin: 0 auto;
 }
 
@@ -38,23 +37,29 @@ hr.bar {
   width: 80px;
 }
 
-.menu div {
+.menu {
  display: flex;
- font-size: 1.75rem;
- min-height: 1.75rem;
- align-items: center;
- padding: 0 1 rem;
+ font-size: 1.50rem;
+ min-height: 1.50rem;
+ padding: 0 1rem;
  background-color: #40b0b5;
  color: #fff;
+ align-items: center;
  font-family: 'Gloria Hallelujah', cursive;
 }
 
-a {
+.menulist,
+.menulist {
   text-decoration: none;
-  margin-right: 1rem;
-  margin-left: auto
 }
 
+.menulist {
+  margin-right: 1rem;
+}
+
+.menulist {
+  margin-left: auto;
+}
 
 a:hover  {
   border: 1px solid #40b0b5;
@@ -66,7 +71,6 @@ a:hover  {
 #my-pic {
   margin: 20px 10px 0px 10px;
   float: left;
-
 }
 
 #my-pic img{
@@ -139,7 +143,7 @@ p {
   background-color: #105b63;
   border-radius: 15px;
   position: absolute;
-  width: 1000PX;
+  width: 800PX;
   top: 0px;
   left: 0px;
   opacity: 0;
@@ -160,7 +164,7 @@ p {
   position: absolute;
   top: 0px;
   left: 0px;
-  width: 1000PX;
+  width: 800PX;
   opacity: 0;
 }
 .persona .TwoB:hover {
@@ -177,7 +181,7 @@ p {
   background-color: pink;
   border-radius: 15px;
   position: absolute;
-  width: 1000PX;
+  width: 800PX;
   top: 0px;
   left: 0px;
   opacity: 0;
@@ -196,7 +200,7 @@ p {
   background-color: purple;
   border-radius: 15px;
   position: absolute;
-  width: 1000PX;
+  width: 800PX;
   top: 0px;
   left: 0px;
   opacity: 0;
@@ -215,7 +219,7 @@ p {
   background-color: lightgreen;
   border-radius: 15px;
   position: absolute;
-  width: 1000PX;
+  width: 800PX;
   top: 0px;
   left: 0px;
   opacity: 0;
@@ -246,19 +250,22 @@ p {
 #teapot {
   background-color: #a34839;
   border-radius: 15px;
-  width: 950px;
-  height:970px;
+  width: 100%;
+  height: auto;
   text-align: center;
-  align-items: center;
 }
-.teapotpic{
+
+.teapotpic {
+  position: relative;
   display: inline-block;
-  max-width: 30%;
+  max-width: 33%;
   margin-top: 20px;
+
 }
 
 .teapotpic img {
   width: 100%;
+  height: 100%;
   border-radius: 10px;
   border: 2px solid gray;
 }
@@ -266,9 +273,6 @@ p {
 .teapotpic img:hover {
   transition: all 1s ease 0s;
   transform: translate(20px,20px) scale(1.5);
-}
-#contact-me {
-
 }
 
 form.contact-form {
@@ -280,7 +284,6 @@ form.contact-form {
 .form-row {
   margin-bottom: 15px;
 }
-
 
 .form-row input, .form-row textarea {
   border-radius: 3px;
@@ -312,4 +315,78 @@ form.contact-form {
 
 .form-row button:active {
   background-color: #407FC7;
+}
+
+@media screen and (min-width: 1024px) {
+  .menu-button,
+  .menu-button-checkbox {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+
+  .container {
+    width: auto;
+  }
+  .teapotpic {
+    width: 100%;
+  }
+
+  .menu-button {
+    float: right;
+    font-size: 25px;
+    line-height: 40px;
+    color: white;
+    background: transparent;
+    padding: 0 15px;
+    border: 0;
+  }
+
+  .menu-button-checkbox {
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 55px;
+    height: 40px;
+  }
+
+  .menu-button-checkbox:checked ~ .menu {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    margin-top: 0;
+    padding-left: 0;
+    position: fixed;
+    right: 0;
+    top: 40px;
+    width: 150px;
+    height: 100%;
+    background: #40b0b5;
+  }
+
+  .menu a {
+    display: flex;
+    font-size: 20px;
+    background-color: white;
+    border: 0;
+    border-radius: 20px;
+  }
+
+  #my-pic {
+    width: 100%;
+  }
+
+  #my-pic img {
+    display: block;
+    margin: 15px auto;
+  }
+
+  form.contact-form {
+  width: 80%;
+  }
+
 }
